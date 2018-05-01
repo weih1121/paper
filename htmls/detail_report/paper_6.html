@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>PaperPass 最权威论文抄袭检测系统</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <div class="text-center PT30">
+        <ul class="pagination"><li><a href="paper_1.html"><span>首页</span></a></li>
+    <li><a href="paper_5.html"><span>上一页</span></a></li>
+    <li><a href="paper_7.html"><span>下一页</span></a></li>
+    <li><a href="paper_13.html"><span>尾页</span></a></li></ul>
+    <div class="ML15 inline-block v-top MT10">
+            页码
+            <span class="g-font-color green">6</span>/<span>13</span>
+            页
+        </div>    </div>
+    <div class="paper-txt P30 PB0">
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="261">261</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">本小节主要描述，互动课堂教师端主界面的界面布局以及主界面一些按钮的设置和布局。</span> <span class="g-font-color green">主界面的内容比较简单，主要是通过一个主界面，在界面上只有在左侧的一个工具栏。</span><a href='../sentence_detail/495.html' target='right' class='g-font-color orange'>通过工具栏上的一些按钮，调用相关的功能模块，实现相应的功能。</a><a href='../sentence_detail/496.html' target='right' class='g-font-color orange'>主界面整体布局如图5-1 互动课堂主界面所示:</a>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="262">262</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">图5-1 互动课堂主界面</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="263">263</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">下面本文将从代码的角度来分析此主界面的编写过程，首先创建一个继承 QMainWindow主界面类，</span><a href='../sentence_detail/499.html' target='right' class='g-font-color orange'>并且在代码中增添一个左侧的工具栏，代码如下所示：</a>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="264">264</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.RightToolBar = QToolBar(’ToolBar’)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="265">265</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.RightToolBar.setIconSize(QSize(30， 30))</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="266">266</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.addToolBar(QtCore.Qt.RightToolBarArea， self.RightToolBar)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="267">267</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">在增加工具栏之后，向工具栏中增添一些功能，在 PyQt5中工具栏中，需要增加 QAction，通过点击或者其他事件触发，</span> <span class="g-font-color green">便可调用相关的模块功能，下面我将以添加浏览器模块的 Action为例，主要逻辑代码如下:</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="268">268</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.actionbrowser = QtWidgets.QAction(’Browser’)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="269">269</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">icon = QtGui.QIcon()</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="270">270</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">icon.addPixmap(QtGui.QPixmap(’../images/toolBarIcon/ie.png’)， QtGui.QIcon.Normal， QtGui.QIcon.Off)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="271">271</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.actionbrowser.setIcon(icon)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="272">272</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.actionbrowser.setObjectName(”actionbrowser”)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="273">273</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.RightToolBar.addAction(self.actionbrowser)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="274">274</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">同样通过如下的方法添加其他的QAction便可实现主界面左侧的工具栏的设置。</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="275">275</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">当然在此处为了可以调用其他模块的响应功能，在类的设计中，通过类包含，</span> <span class="g-font-color green">将画板模块，浏览器模块截屏模块，录屏模块，截屏模块添加到类的属性中。</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="276">276</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">通过以上的步骤设置好工具栏后，在进行相应的触发动作执行后需要通过 PyQt5中的信号与槽机制，</span> <span class="g-font-color green">来完成相应的信号传递以及对应的函数调用。</span> <span class="g-font-color green">下面以调用浏览器模块为例相应的信号与槽函数连接过程如下：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="277">277</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.actionbrowser.triggered.connect(self.FormBrowser)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="278">278</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">由于 Python的易读性很容易看懂其中代码的含义，当触发浏览器模块时动作后，调用浏览器模块的槽函数，</span> <span class="g-font-color green">而在槽函数中编写具体浏览器模块被调用的具体实现。</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="279">279</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">主界面的实现比较容易而且易于理解，在此并不做过多的探讨，只是PyQt5基础知识的最简单的应用。</span> <span class="g-font-color green">下面的模块的实现中，也不再对信号与槽函数的具体的机制进行深入的解释，关于主界面的更多内容在此便不再更多描述。</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="280">280</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">5.2 主要功能模块的实现</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="281">281</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">5.2.1 网页模块的实现</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="282">282</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">网页模块的实现主要是基于 PyQt5的 QWebEngine模块实现，本篇论文所讨论的浏览器模块功能比较简单，所使用到的也仅仅只是 QWebEngine中一些简单的功能，</span> <span class="g-font-color green">通过将页面嵌入到应用程序中，为教师提供直接访问网络的接口。</span><a href='../sentence_detail/526.html' target='right' class='g-font-color orange'>网页浏览模块实现的结果下图5-2 网页模块的展示图所示：</a>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="283">283</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">图5-2 网页模块的展示图</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="284">284</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                <a href='../sentence_detail/528.html' target='right' class='g-font-color orange'>网页模块目录结构如下图5-3 网页模块的项目文件结构图所示：</a>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="285">285</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">5-3 网页模块的项目文件结构图</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="286">286</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">下面将根据如图所示的结果对界面的布局以及功能的实现做简要的描述。</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="287">287</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">首先创建一个继承自QMainWindow的Broswer类，用来展示网页浏览的主界面。</span><a href='../sentence_detail/532.html' target='right' class='g-font-color orange'>根据上图所示的结果，在主界面中主要包含以下内容：</a>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="288">288</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">（1）客户端主窗体展示所有的内容</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="289">289</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">（2）主窗体中的主浏览器</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="290">290</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">（3）主浏览器上方的工具栏</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="291">291</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">接下来将会依次分析这三个部分的代码，并且进行一定的解释。</span> <span class="g-font-color green">在这个窗体中主要实现了以下几个函数：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="292">292</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">navigate_to_url(self)用来将url指定到浏览器中</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="293">293</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">renew_urlbar(self， q)在输入页面url后通过刷新重新</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="294">294</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">closeEvent(self， event)关闭当前所显示的内容</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="295">295</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">在界面布局上，由于界面继承自QMainWindow，在类中存在这样的一个CenteralWidget成员变量，表示继承自QMainwindow的核心控件类，在这里首先创建一个QWebEngine的实例，</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="296">296</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.browser = QWebEngineView ()</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="297">297</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">url = ’https:</span> <span class="g-font-color green">//www.baidu.com’</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="298">298</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.browser.setUrl(QUrl(url))</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="299">299</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.setCentralWidget(self.browser)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="300">300</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">通过指定默认的 url便可在打开本模块的时候自动打开浏览器所指定的 url所对应的页面，</span> <span class="g-font-color green">之后将 broswer实例指定父对象， broswer的父对象为窗体的 CentralWidget控件，之后在打开浏览器时，</span> <span class="g-font-color green"> broswer实例就会显示在窗体的核心控件中。</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="301">301</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">在界面中除此之外，还有一个简易的工具栏，主要由4个按钮，分别是页面前进功能，</span> <span class="g-font-color green">页面后退功能，页面刷新功能和页面关闭功能，还有一个输入框用来输入和显示指定的 URL。</span><a href='../sentence_detail/552.html' target='right' class='g-font-color orange'>工具栏部分通过QToolBar创建一个工具栏实例，之后将工具栏实例添加到窗口中，</a>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="302">302</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">为了实现前进，后退，停止加载和刷新功能，还需要在工具栏中添加4个Action对象。</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="303">303</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">Toolbar代码：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="304">304</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">navigation_bar = QToolBar(’Navigation’)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="305">305</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">navigation_bar.setIconSize(QSize(16， 16))</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="306">306</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.addToolBar(navigation_bar)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="307">307</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">4个QAction对象代码：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="308">308</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">back_button = QAction(QIcon(’../Web/icons/back.png’)， ’Back’， self)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="309">309</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">next_button = QAction(QIcon(’../Web/icons/next.png’)， ’Forward’， self)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="310">310</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">stop_button = QAction(QIcon(’../Web/icons/cross.png’)， ’stop’， self)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="311">311</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">reload_button = QAction(QIcon(’../Web/icons/renew.png’)， ’reload’， self)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="312">312</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">将按钮放到导航栏上：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="313">313</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">navigation_bar.addAction(back_button)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="314">314</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">navigation_bar.addAction(next_button)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="315">315</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">navigation_bar.addAction(stop_button)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="316">316</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">navigation_bar.addAction(reload_button)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="317">317</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">若要实现相应的点击功能需要将相应的对象与相应的槽函数连接，并在触发事件执行之后触发相应的动作，下面是对应的槽函数连接方法：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="318">318</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">back_button.triggered.connect(self.browser.back)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="319">319</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">next_button.triggered.connect(self.browser.forward)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="320">320</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">stop_button.triggered.connect(self.browser.stop)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="321">321</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">reload_button.triggered.connect(self.browser.reload)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="322">322</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">设置url的槽函数：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="323">323</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">def navigate_to_url(self):</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="324">324</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">q = QUrl(self.urlbar.text())</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="325">325</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">if q.scheme() == ’’:</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="326">326</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">q.</span> <span class="g-font-color green">setScheme(’http’)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="327">327</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.browser.setUrl(q)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="328">328</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">刷新页面的槽函数：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="329">329</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">def renew_urlbar(self， q):</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="330">330</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.urlbar.setText(q.toString())</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="331">331</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">self.urlbar.setCursorPosition(0)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="332">332</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">停止页面刷新的槽函数：</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="333">333</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">def closeEvent(self， event):</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+        
+        <div class="paper-section" tpl-section="warp">
+            <span class="label-warning" tpl-section="badge" data-id="334">334</span>
+            <p class="MT20 text-idt25" tpl-section="text">
+                 <span class="g-font-color green">reply = QMessageBox.question(self， ’Message’，”Are you sure to quit?</span> <span class="g-font-color green">”， QMessageBox.Yes  QMessageBox.No， QMessageBox.No)</span>            </p>
+            <div class="text-right">
+                <button type="button" tpl-section="btn" class="g-btn g-btn-default g-btn-sm MT10">段落修改</button>
+            </div>
+            <div tpl-section="box"></div>
+        </div>
+            </div>
+    <div class="text-center PB30">
+        <ul class="pagination"><li><a href="paper_1.html"><span>首页</span></a></li>
+    <li><a href="paper_5.html"><span>上一页</span></a></li>
+    <li><a href="paper_7.html"><span>下一页</span></a></li>
+    <li><a href="paper_13.html"><span>尾页</span></a></li></ul>
+    <div class="ML15 inline-block v-top MT10">
+            页码
+            <span class="g-font-color green">6</span>/<span>13</span>
+            页
+        </div>    </div>
+    <div style="text-align: center;padding-top:30px">
+         <a href="http://www.118qikan.com/service?f=pp_report_section" target="_blank"><img src="http://file.paperpass.com/images/fabiao.jpg"/></a></div>
+    <div class="paper-footer">
+        <p>检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成</p>
+        <p>Copyright © 2007-2018 PaperPass</p>
+    </div>
+</div>
+</body>
+<script type="text/html" template="section">
+    <div class="text-right">
+        <div class="modifyTxt-notice">
+            修改完本段落之后，点击“临时保存”，之后可在上方导航“修改文档”页面中查看修改后的内容
+        </div>
+        <textarea class="form-control resize-none" rows="4" tpl-section="textarea"></textarea>
+        <div class="button-wrap MT10">
+            <button type="button" class="g-btn g-btn-default g-btn-sm red" tpl-section-cancle="btn">取消保存</button>
+            <button type="button" class="g-btn g-btn-default g-btn-sm" tpl-section-save="btn">临时保存</button>
+        </div>
+    </div>
+</script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/Lib.js"></script>
+<script type="text/javascript">
+    Report.report_id = '5ae835937174970vw';
+</script>
+<script type="text/javascript">
+    (function(System,$){
+
+        var sectionEdit = System.Paper.sectionEdit();
+        var sectionSave = System.Paper.sectionSave(null);
+        $(function(){
+            $(document).on('click','[tpl-section=btn]',function(){
+                sectionEdit.call(this);
+            });
+            $(document).on('click','[tpl-section-save=btn]',function(){
+                sectionSave.call(this);
+
+            });
+            $(document).on('click','[tpl-section-cancle=btn]',function(){
+                var $warp = $(this).closest('[tpl-section="warp"]');
+                $warp.find('[tpl-section="box"]').html('');
+            });
+
+
+        });
+    })(Report,jQuery);
+
+</script>
+</html>
